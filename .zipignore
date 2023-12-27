@@ -1,0 +1,7 @@
+*.git*
+*.DS_Store*
+*.idea*
+*phpcs*
+*composer.json*
+*composer.lock*
+*vendor*

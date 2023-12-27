@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Coding Standards for GF Integration">
+
+  <rule ref="WordPress-Core">
+    <exclude name="Universal.Arrays.DisallowShortArraySyntax" />
+    <exclude name="WordPress.Files.FileName" />
+  </rule>
+
+  <rule ref="WordPress-Docs" />
+  <rule ref="WordPress-Extra" />
+
+  <rule ref="Generic.Arrays.DisallowLongArraySyntax.Found" />
+
+  <rule ref="WordPress.WP.I18n">
+    <properties>
+      <property name="text_domain" type="array">
+        <element value="delay-posts"/>
+      </property>
+    </properties>
+  </rule>
+
+  <config name="testVersion" value="7.0-"/>
+  <rule ref="PHPCompatibilityWP">
+    <exclude-pattern>bin/*</exclude-pattern>
+  </rule>
+
+  <arg value="s"/>
+  <arg name="extensions" value="php"/>
+
+  <file>.</file>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>
